@@ -8,6 +8,10 @@ const app = express();
 
 app.use(express.json());
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../build")));
+}
+
 app.get("/api/grants", async (req, res) => {
     const rest = await fetch(GRANT_DATA_URL);
     const response = await rest.json();
