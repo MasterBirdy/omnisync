@@ -5,16 +5,12 @@ Hi, thanks for taking a look at my project. 👋 This project requires npm and n
 If you'd like to run it in development mode, simply run:
 
 ```
-npm start
+npm run dev
 ```
 
-If you'd like to run it in production mode, you'll need to build a production version of the React app. Run the following commands:
+If you'd like to run it in production mode, change the NODE_ENV variable to "production". Then run:
 
 ```
-cd client
-npm run build
-mv build ..
-cd ..
 npm start
 ```
 
